@@ -122,7 +122,7 @@ public class CmdExecutor {
 
 	public static byte[] sendFileClient(String origin){
 		
-		File f = new File(EchoServer.ROOT + SEP + origin);
+		File f = new File(origin);
 		byte[] content = null;
 		try {
 			content = Files.readAllBytes(f.toPath());
