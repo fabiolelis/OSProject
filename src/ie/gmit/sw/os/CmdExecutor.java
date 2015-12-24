@@ -49,7 +49,8 @@ public class CmdExecutor {
 			auth.getUser().setCurrentDir(newDir);
 			result = true;
 		}
-	    
+	    System.out.println("result " + result);
+
 	    
 		return result;
 
