@@ -115,7 +115,7 @@ class ClientServiceThread extends Thread {
 						message = (String)in.readObject();
 					}
 				}
-				else if(message.contains("ls ")){
+				else if(message.contains("ls")){
 					
 					String listFiles = CmdExecutor.listFiles(auth);
 					sendMessage("Files: \n" + listFiles + "\nEnter \"OK\" to more commands or \"exit\" to finish" ); 

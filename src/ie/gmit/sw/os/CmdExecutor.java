@@ -105,7 +105,9 @@ public class CmdExecutor {
 	
 	public static byte[] sendFile(String origin){
 		
-		File f = new File(origin);
+		File f = new File(EchoServer.ROOT + SEP + origin);
+		System.out.println("file from " + EchoServer.ROOT + SEP + origin);
+
 		byte[] content = null;
 		try {
 			content = Files.readAllBytes(f.toPath());
