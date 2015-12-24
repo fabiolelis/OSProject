@@ -141,7 +141,7 @@ class ClientServiceThread extends Thread {
 					else
 						filename = message.substring(message.indexOf(" ") +1, message.length());
 					
-					byte[] content = CmdExecutor.sendFile(filename);
+					byte[] content = CmdExecutor.sendFile(filename, auth);
 				
 					sendMessage(filename);
 					out.writeObject(content);

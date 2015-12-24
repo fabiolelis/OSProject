@@ -103,11 +103,11 @@ public class CmdExecutor {
 	    return list;
 	}
 	
-	public static byte[] sendFile(String origin){
+	public static byte[] sendFile(String origin, Authentication auth){
 		
-		File f = new File(EchoServer.ROOT + SEP + origin);
-		System.out.println("file from " + EchoServer.ROOT + SEP + origin);
+		System.out.println("file from " + EchoServer.ROOT + SEP + auth.getUser().getCurrentDir() + SEP + origin);
 
+		File f = new File(EchoServer.ROOT + SEP + auth.getUser().getCurrentDir() + SEP + origin);
 		byte[] content = null;
 		try {
 			content = Files.readAllBytes(f.toPath());
@@ -119,6 +119,22 @@ public class CmdExecutor {
 		return content;
 		
 	}
+
+	public static byte[] sendFileClient(String origin){
+		
+		File f = new File(EchoServer.ROOT + SEP + origin);
+		byte[] content = null;
+		try {
+			content = Files.readAllBytes(f.toPath());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return content;
+		
+	}
+	
 	public static boolean saveFile(byte[] content, Authentication auth, String name){
 		//name = "teste.txt";
 		System.out.println("saving in " + EchoServer.ROOT + SEP + auth.getUser().getCurrentDir() + SEP + name);

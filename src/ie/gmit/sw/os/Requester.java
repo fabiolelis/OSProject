@@ -36,7 +36,7 @@ public class Requester{
 					if(message.contains("put ")){
 						String origin = message.split(" ")[1];
 						sendMessage(message);
-						byte[] obj = CmdExecutor.sendFile(origin);
+						byte[] obj = CmdExecutor.sendFileClient(origin);
 						if(obj == null){
 							System.out.println("Invalid path or not allowed area\nEnter \"OK\" to try again or \"exit\" to finish");
 							message = stdin.nextLine();
