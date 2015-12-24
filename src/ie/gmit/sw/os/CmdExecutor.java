@@ -119,7 +119,9 @@ public class CmdExecutor {
 	}
 	public static boolean saveFile(byte[] content, Authentication auth, String name){
 		//name = "teste.txt";
-		File f = new File(auth.getUser().getCurrentDir() + SEP + name);
+		System.out.println("saving in " + EchoServer.ROOT + SEP + auth.getUser().getCurrentDir() + SEP + name);
+		File f = new File(EchoServer.ROOT + SEP + auth.getUser().getCurrentDir() + SEP + name);
+		
 		try {
 			Files.write(f.toPath(), content);
 		} catch (IOException e) {
