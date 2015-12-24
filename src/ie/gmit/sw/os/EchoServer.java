@@ -148,6 +148,10 @@ class ClientServiceThread extends Thread {
 					out.flush();
 
 				}
+				else {
+					sendMessage("Command not found\nEnter \"OK\" to more commands or \"exit\" to finish" ); 
+					message = (String)in.readObject();
+				}
 				
 				
 				
