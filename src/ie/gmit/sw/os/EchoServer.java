@@ -14,7 +14,7 @@ import java.net.Socket;
 public class EchoServer {
 
   public static int PORT = 2004;
-  public static String ROOT = "/Users/fabiolelis/Documents/workspace/OSXmasProject";
+  public static String ROOT = "C:\\Users\\fabiolelis\\Desktop\\project";
   
 
   public static void main(String[] args) throws Exception {

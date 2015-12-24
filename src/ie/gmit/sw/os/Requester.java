@@ -18,7 +18,7 @@ public class Requester{
 			//1. creating a socket to connect to the server
 			//System.out.println("Please Enter your IP Address");
 			//ipaddress = stdin.next();
-			ipaddress = "127.0.0.1";
+			ipaddress = "40.117.90.232";
 			requestSocket = new Socket(ipaddress, EchoServer.PORT);
 			System.out.println("Connected to "+ipaddress+" in port " + EchoServer.PORT);
 			//2. get Input and Output streams

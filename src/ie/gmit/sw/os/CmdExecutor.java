@@ -6,7 +6,7 @@ import java.nio.file.Files;
 
 public class CmdExecutor {
 	
-	public static String SEP = "/";
+	public static String SEP = "\\";
 	
 	public static boolean mkDir(Authentication auth, String folderName){
 		
@@ -56,7 +56,7 @@ public class CmdExecutor {
 	
 	public static String smartDirectory(String dir, Authentication auth){
 		String newDir = "";
-		String[] splitted = dir.split(SEP);
+		String[] splitted = dir.split(SEP+SEP);
 		
 		if(splitted[0].equals("."))
 			newDir = auth.getUser().getDirectory();
