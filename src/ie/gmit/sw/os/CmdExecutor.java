@@ -83,6 +83,7 @@ public class CmdExecutor {
 	public static String listFiles(Authentication auth){
 		
 		String newDir = smartDirectory("", auth);
+		System.out.println("newdir " + newDir);
 		if(newDir.equals("ERROR"))
 			return "Invalid path or not allowed area\n";
 		
