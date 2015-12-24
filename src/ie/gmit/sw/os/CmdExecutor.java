@@ -89,7 +89,7 @@ public class CmdExecutor {
 		if(newDir.equals("ERROR"))
 			return "Invalid path or not allowed area\n";
 		
-		File folder = new File(newDir);
+		File folder = new File(EchoServer.ROOT + SEP + newDir);
 		File[] listOfFiles = folder.listFiles();
 		String list = "";
 		
