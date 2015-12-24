@@ -44,8 +44,8 @@ public class CmdExecutor {
 	    if(!newDir.contains(auth.getUser().getDirectory()))
 	    	return false;	
 	    
-		File theDir = new File(newDir);
-		if (theDir.exists()) {
+		File theDir = new File(EchoServer.ROOT + SEP + newDir);
+		if (theDir.isDirectory()) {
 			auth.getUser().setCurrentDir(newDir);
 			result = true;
 		}
