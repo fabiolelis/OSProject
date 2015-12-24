@@ -40,6 +40,7 @@ public class CmdExecutor {
 	    boolean result = false;
 	    
 	    String newDir = CmdExecutor.smartDirectory(folderName, auth);
+	    System.out.println("newdir " + newDir);
 	    if(!newDir.contains(auth.getUser().getDirectory()))
 	    	return false;	
 	    
